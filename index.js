@@ -72,8 +72,8 @@ class Swipeout extends React.Component {
           start
         } = this.state;
 
-        let moved = gestureState.moveX != 0;
-        let change = gestureState.moveX - gestureState.x0;
+        let moved = gestureState.dx != 0;
+        let change = gestureState.dx;
         let velocity = Math.abs(gestureState.vx);
         let velocityMin = 0.3;
         let speed = 200/velocity;
