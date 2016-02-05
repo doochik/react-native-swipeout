@@ -33,7 +33,7 @@ class Btn extends React.Component {
 
     return (
       <TouchableHighlight {...this.props} style={[styles.btn, this.setTypeStyle(), customStyle]}>
-        <Text style={styles.btnText}>{this.props.text}</Text>
+        <Text numberOfLines={1} style={styles.btnText}>{this.props.text}</Text>
       </TouchableHighlight>
     );
   }
