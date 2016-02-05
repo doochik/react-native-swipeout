@@ -104,8 +104,8 @@ class Swipeout extends React.Component {
   }
   handleBtnPress(btn) {
     let { defaultSpeed } = this.state;
-    if (btn.props && btn.props.onPress) btn.props.onPress();
-    if (btn.autoClose) this.handleClose(defaultSpeed*2);
+    if (btn.onPress) btn.onPress();
+    if (this.props.autoClose) this.handleClose(defaultSpeed*3);
   }
   handleClose(duration) {
     Animated.timing(this.state.panX, {
