@@ -60,8 +60,11 @@ class Swipeout extends React.Component {
         dx: this.state.panX,
       }]),
 
-      onPanResponderRelease: (e, gestureState) => {
+      onPanResponderTerminationRequest: () => {
+        return false;
+      },
 
+      onPanResponderRelease: (e, gestureState) => {
         let {
           defaultSpeed,
           panX,
